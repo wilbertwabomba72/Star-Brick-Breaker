@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Brick Breaker</title>
+  <style>
+    :root {
+      --bg: #04133a;
+      --bg2: #08215f;
+      --card: rgba(10, 27, 80, 0.78);
+      --line: rgba(120, 190, 255, 0.26);
+      --text: #eef7ff;
+      --muted: #b8cdf0;
+      --accent: #ffd34d;
+      --cyan: #54d2ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(97, 191, 255, 0.22), transparent 30%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+    }
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .hero {
+      padding: 64px 0 32px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(5, 18, 53, 0.7);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(38px, 8vw, 68px);
+      line-height: 0.95;
+    }
+    .lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .cta, .ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .cta {
+      color: #071632;
+      background: linear-gradient(135deg, #ffe46e, #ffbd3c);
+    }
+    .ghost {
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(10, 26, 77, 0.55);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 34px 0 56px;
+    }
+    .card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      backdrop-filter: blur(14px);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .section {
+      padding: 18px 0 44px;
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 30px;
+    }
+    .section p, .section li {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .shots.ipad {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    figure {
+      margin: 0;
+      padding: 14px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(6, 17, 52, 0.72);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+    }
+    figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font: inherit;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    footer {
+      padding: 32px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .grid, .shots, .shots.ipad, .meta {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="badge">Arcade Brick Breaker</span>
+      <h1>Star Brick Breaker</h1>
+      <p class="lead">
+        Dive into a glowing underwater arcade challenge filled with collectible stars, bomb bricks,
+        ice bricks, moving obstacles, and 50 handcrafted single-player levels. Built for quick sessions,
+        smooth controls, and satisfying chain explosions.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="privacy.html">Privacy Policy</a>
+        <a class="ghost" href="mailto:508923216@qq.com">Developer Contact</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>50 Progressive Levels</h3>
+        <p>Every level introduces a denser layout, more stars to collect, and a sharper difficulty curve.</p>
+      </article>
+      <article class="card">
+        <h3>Special Bricks</h3>
+        <p>Break through ice blocks, dodge moving bricks, and trigger bomb bricks for powerful area damage.</p>
+      </article>
+      <article class="card">
+        <h3>Offline Arcade Play</h3>
+        <p>No account, no online requirement, just immediate single-player action with saved progress and stars.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Gameplay Highlights</h2>
+      <p>
+        Star Brick Breaker combines classic ball-and-paddle gameplay with modern visual effects and objective-based
+        level design. Collect all stars, preserve your three lives, and smash through layered brick formations while
+        taking advantage of explosive chain reactions.
+      </p>
+      <ul>
+        <li>Collect stars to clear each stage completely.</li>
+        <li>Use bomb bricks to wipe out nearby targets.</li>
+        <li>Crack ice bricks in multiple hits.</li>
+        <li>React to moving bricks that change the angle of every shot.</li>
+        <li>Track progress with local save data and level star ratings.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>iPhone 6.5 Screenshot Set</h2>
+      <div class="shots">
+        <figure>
+          <img src="site_assets/iphone_01.jpg" alt="Star Brick Breaker iPhone screenshot 1">
+          <figcaption>Underwater action with collectible stars and classic brick formations.</figcaption>
+        </figure>
+        <figure>
+          <img src="site_assets/iphone_02.jpg" alt="Star Brick Breaker iPhone screenshot 2">
+          <figcaption>Late-game layouts introduce bomb bricks, ice bricks, and tighter patterns.</figcaption>
+        </figure>
+        <figure>
+          <img src="site_assets/iphone_03.jpg" alt="Star Brick Breaker iPhone screenshot 3">
+          <figcaption>Clean HUD, instant controls, and bright arcade readability on tall-screen iPhones.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>iPad 13-inch Screenshot Set</h2>
+      <div class="shots ipad">
+        <figure>
+          <img src="site_assets/ipad_01.jpg" alt="Star Brick Breaker iPad screenshot 1">
+          <figcaption>Expanded layouts for large-screen play with more visible space and longer paddle movement.</figcaption>
+        </figure>
+        <figure>
+          <img src="site_assets/ipad_02.jpg" alt="Star Brick Breaker iPad screenshot 2">
+          <figcaption>Bomb-heavy and ice-heavy stages scale up beautifully on iPad.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>App Store Metadata Draft</h2>
+      <div class="meta">
+        <article class="card">
+          <h3>Keywords</h3>
+          <pre>brick breaker, breakout, arcade, underwater, star, bomb, puzzle, ice brick, offline, casual</pre>
+        </article>
+        <article class="card">
+          <h3>Description</h3>
+          <pre>Enter a glowing underwater arcade where every shot matters.
+
+Star Brick Breaker is a single-player brick breaking game built around collectible stars, explosive bomb bricks, moving targets, and icy obstacles. Clear all stars, survive with your remaining lives, and push through 50 progressively harder levels.
+
+Features:
+- 50 offline levels with increasing challenge
+- Collectible stars in every stage
+- Bomb bricks with area explosions
+- Ice bricks that require extra hits
+- Moving bricks that shift your shot timing
+- Local progress saving and level star ratings
+- Background music and sound controls
+- Optimized for both iPhone and iPad
+
+Perfect for quick sessions, score chasing, and classic arcade fans who want a fresh visual theme.</pre>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div>Developer contact: <a href="mailto:508923216@qq.com" style="color:#9ddfff;">508923216@qq.com</a></div>
+      <div style="margin-top:8px;">Privacy policy available at <a href="privacy.html" style="color:#9ddfff;">privacy.html</a></div>
+    </footer>
+  </div>
+</body>
+</html>
